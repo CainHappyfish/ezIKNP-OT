@@ -1,10 +1,9 @@
-# ezINKP-OT
-
-对于INKP-OT的简单实现
+# IKNP-OT
+来源于Mike Rosulek教授在上海期智研究院的密码学学术讲座。
 
 ## INKP的基本思路
 
-来源于Mike Rosulek教授在上海期智研究院的密码学学术讲座。
+
 
 该协议可以使用有限的OTs实现足够多次的OT
 
@@ -14,7 +13,7 @@
 
 1. 首先Bob拥有一个随机输入$r$
 
-![](https://pic.imgdb.cn/item/65eff7959f345e8d0389a0b1.png)
+   ![](https://pic.imgdb.cn/item/65eff7959f345e8d0389a0b1.png)
 
 2. Bob将其多次扩展为矩阵$R$，矩阵的每一列都相同，宽度可以为128，长度任意
 
@@ -45,14 +44,14 @@
 
 我们再从行的角度来观察Alice和Bob的矩阵。对于每一个$i$，Bob知道$t_i=r_i$，Alice知道$q_i$和$q_i\oplus s$，这两个值中有一个与Bob的$t_i$相同。
 
-![](https://pic.imgdb.cn/item/65effb639f345e8d039a5f30.png)
+   ![](https://pic.imgdb.cn/item/65effb639f345e8d039a5f30.png)
 
 - Alice不知道Bob的$r_i$值，所以不知道Bob选择的$t_i$到底是和$q_i$相等还是和$q_i\oplus s$相等
 - Bob不知道Alice的$s$值，除了知道选择的$t_i$等于$q_i$和$q_i\oplus s$其中一个，而对另一个值一无所知
 
 这里我们需要注意，如果$s_i=0$，则最后的结果与Bob的输入$t_i$无关。
 
-![](https://pic.imgdb.cn/item/65effd619f345e8d03a29bee.png)
+   ![](https://pic.imgdb.cn/item/65effd619f345e8d03a29bee.png)
 
 由此我们可以得到：
 
@@ -104,6 +103,4 @@
 
 
 
-
-## 一般化IKNP
 
