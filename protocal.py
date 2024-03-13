@@ -1,5 +1,3 @@
-import sys
-sys.path.append('/home/cain/Crypto/ezIKNP-OT')
 
 from sender import Sender
 from receiver import Receiver
@@ -39,5 +37,9 @@ print("Your random string is ", Alice.genRandomString(Bob.matrix_wide))
 
 print("According to your random string, your matrix Q is")
 ot = OT(Bob, Alice)
+Alice.Q = ot.CorrelationOT()
 for i in range(0, Bob.matrix_len):
     print(ot.CorrelationOT()[i])
+    
+print(Alice.OTInitialize())
+print(Alice.OTtoSender())
