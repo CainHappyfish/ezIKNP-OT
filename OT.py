@@ -3,6 +3,9 @@ from receiver import *
 
 
 class OT(object):
+    ot_sender = Sender()
+    ot_receicer = Receiver()
+    
     def __init__(self, sender, receiver):
         self.sender = sender
         self.receiver = receiver
@@ -24,5 +27,11 @@ class OT(object):
         self.Q = Q
         
         return Q
+    
+    def Transfer(self):
+        for i in range(0, len(self.ot_sender.r)):
+            if self.ot_sender.[i] == 1:
                 
-                
+            
+        
+        
