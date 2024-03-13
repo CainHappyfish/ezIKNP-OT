@@ -17,6 +17,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from clients import Alice 
+from clients import Bob
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('Alice/', Alice.hello),
+    path('Bob/', Bob.hello)
 ]
