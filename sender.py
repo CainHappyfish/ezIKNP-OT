@@ -33,8 +33,9 @@ class Sender(object):
         genRandomBit = Random()
 
         for i in range(0, self.matrix_len):
+            T.append([])
             for j in range(0, self.matrix_wide):
-                T[i][j] = genRandomBit.randint(0,1)
+                T[i].append(genRandomBit.randint(0,1))
 
         self.T = T
 
@@ -43,9 +44,11 @@ class Sender(object):
     def MatrixSecretShare(self):
         T_ = []
 
+
         for i in range(0, self.matrix_len):
+            T_.append([])
             for j in range(0, self.matrix_wide):
-                T_[i][j] = self.T[i][j] ^ self.R[i][j]
+                T_[i].append(self.T[i][j] ^ self.R[i][j]) 
 
         self.T_ = T_
 
@@ -54,11 +57,15 @@ class Sender(object):
 
     
     
-test = Sender()
-str = [1,1,0,0,1,0,1]    
+# test = Sender()
+# str = [1,1,0,0,1,0,1]    
 
-for i in range(0, len(str)):
-    print(test.strExtend(str, 4)[i])
+# for i in range(0, len(str)):
+#     print(test.strExtend(str, 4)[i], "R", test.matrix_wide)
 
-        
-    
+# for i in range(0, len(str)):
+#     print(test.genRandomMatrix()[i], "T")
+
+# for i in range(0, len(str)):
+#     print(test.MatrixSecretShare()[i], "T_")        
+  
