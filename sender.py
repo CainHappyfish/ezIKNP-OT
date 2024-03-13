@@ -2,27 +2,34 @@ from random import Random
 
 class Sender(object):
 
+    r = ""
     matrix_len = 0
     matrix_wide = 0
+    T = []
+    T_ = []
 
     def __init__(self) -> None:
         pass
 
-    def genRandomString(self,num):
+    def genRandomString(self, num):
+        
         r = []
         random_instance = Random()      # Random是一个类，需要实例化
         for i in range(0, num):
             r.append(random_instance.randint(0,1))
+            
+        self.r = r
+        
         return r
 
-    def strExtend(self, str, num):
-        self.matrix_len = len(str)
+    def strExtend(self, num):
+        self.matrix_len = len(self.r)
         self.matrix_wide = num
         R = []
-        for i in range(0, len(str)):
+        for i in range(0, len(self.r)):
             R.append([])
             for j in range(0, num):
-                R[i].append(str[i])
+                R[i].append(self.r[i])
         
         self.R = R
         

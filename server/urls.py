@@ -22,6 +22,6 @@ from clients import Bob
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('Alice/', Alice.hello),
+    path('Alice/', Alice.RenderTest),
     path('Bob/', Bob.hello)
 ]
