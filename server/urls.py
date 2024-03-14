@@ -19,9 +19,11 @@ from django.urls import path
 
 from clients import Alice 
 from clients import Bob
+from clients import test
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('Alice/', Alice.RenderTest),
     path('Bob/', Bob.hello)
+    path('test/', test)
 ]
