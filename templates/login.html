@@ -3,21 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <title>IKNP-OT Login</title>
-    <link href="static/css/login.css" rel="stylesheet"/>
+    <link href="../static/css/login.css" rel="stylesheet"/>
 </head>
 <body>
     <div class="center-div">
         <div class="bordered" >
             <h1 class = "special-h1">Login Page</h1>
             <form aciton="/login" method="post">
-                <p class = "role-choose">Your Role</p>
+                <!-- <p class = "role-choose">Your Role</p> -->
 
-                <div id = "select-box">
-                    <select id= "role-select">
+                <div id = "select-box">Your Role: 
+                    <select id= "role-select" name="role select">
                         <option value="">Please choose your role</option>
                         <option value="sender">Sender</option>
                         <option value="receiver">Receiver</option>
                     </select>
+                </div>
+
+                <div id = "name-box">Your name: 
+                    <input type="text" id="name" name="name">
                 </div>
 
             </form>
