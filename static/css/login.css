@@ -68,3 +68,17 @@ body, html {
     height: 20px;
     width: 200px;
 }
+
+#submit-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#submit {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-top: 20px;
+    height: 30px;
+    width: 100px;
+
+}
