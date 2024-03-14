@@ -2,10 +2,26 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>ezIKNP OT Login Page</title>
-    <link href="../static/css/test.css" rel="testsheet"/>
+    <title>IKNP-OT Login</title>
+    <link href="static/css/login.css" rel="stylesheet"/>
 </head>
 <body>
-    <h1>{{test}}</h1>
+    <div class="center-div">
+        <div class="bordered" >
+            <h1 class = "special-h1">Login Page</h1>
+            <form aciton="/login" method="post">
+                <p class = "role-choose">Your Role</p>
+
+                <div id = "select-box">
+                    <select id= "role-select">
+                        <option value="">Please choose your role</option>
+                        <option value="sender">Sender</option>
+                        <option value="receiver">Receiver</option>
+                    </select>
+                </div>
+
+            </form>
+        </div>
+    </div>
 </body>
 </html>
