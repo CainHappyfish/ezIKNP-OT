@@ -48,7 +48,6 @@ class Receiver(object):
         q_xor = []
 
         for i in range(0, self.num_ot):
-            # q_xor_str = [str(num ^ self.s[i]) for num in self.Q[i]]
             qi_xor_str = []
             for j in range(0, len(self.Q[i])):
                 qi_xor_str.append(str(self.s[j] ^ self.Q[i][j]))

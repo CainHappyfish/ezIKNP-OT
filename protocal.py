@@ -43,3 +43,5 @@ for i in range(0, Bob.matrix_len):
     
 print(Alice.OTInitialize())
 print(Alice.OTtoSender())
+
+print(ot.Transfer())
