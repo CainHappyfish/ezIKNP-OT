@@ -20,10 +20,14 @@ from django.urls import path
 from clients import Alice 
 from clients import Bob
 from clients import test
+from clients import login
+from clients import receiver
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('Alice/', Alice.RenderTest),
-    path('Bob/', Bob.hello)
-    path('test/', test)
+    path('Bob/', Bob.hello),
+    path('test/', test.test),
+    path('login/', login.login),
+    path('receiver/', receiver.test)
 ]
