@@ -10,7 +10,7 @@
         <div class="bordered" >
             <h1 class = "special-h1">Login Page</h1>
             <form aciton="/login" method="post">
-                <!-- <p class = "role-choose">Your Role</p> -->
+                {% csrf_token %}
 
                 <div id = "select-box">Your Role: 
                     <select id= "role-select" name="role select">
